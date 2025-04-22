@@ -1,0 +1,32 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+  }
+  
+  .login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1890ff;
+  }
+  
+  .login-footer {
+    text-align: center;
+    margin-top: 16px;
+    color: rgba(0, 0, 0, 0.45);
+    
+    a {
+      color: #1890ff;
+    }
+  }
