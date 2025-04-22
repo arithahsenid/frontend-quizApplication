@@ -1,0 +1,53 @@
+<div class="bg" style="background-color: #F8F8F8; min-height: 100vh; display: flex; align-items: center;">
+    <div class="parent" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 20px;">
+      <div class="child" style="background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+                  width: 100%; max-width: 500px; margin: 0 auto; padding: 40px;">
+        <div nz-row class="imgDiv" style="text-align: center; margin-bottom: 30px;">
+          <h1 style="font-size: 24px; color: #1890ff;">Sign Up</h1>
+        </div>
+  
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()" style="max-width: 400px; margin: 0 auto;">
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail">
+              <input nz-input placeholder="E-mail" formControlName="email" style="width: 100%;"/>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="The input is not valid Password!">
+              <input nz-input placeholder="Password" type="password" formControlName="password" style="width: 100%;"/>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control nzHasFeedback nzErrorTip="Please input your name!">
+              <input nz-input placeholder="Name" formControlName="name" style="width: 100%;"/>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control>
+              <button nz-button 
+                      class="login-form-button login-form-margin" 
+                      [nzType]="'primary'"
+                      [disabled]="!validateForm.valid"
+                      style="width: 100%; height: 40px;">
+                Register
+              </button>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control>
+              <div class="login-options">
+                <span>Already have an account? </span>
+                <a nz-button nzType="link" routerLink="/login" class="login-link">
+                  Login now!
+                </a>
+              </div>
+            </nz-form-control>
+          </nz-form-item>
+        </form>
+      </div>
+    </div>
+  </div>
